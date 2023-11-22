@@ -25,6 +25,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button13 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -39,7 +40,6 @@ Partial Class Form1
         Me.CloseButton = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -77,6 +77,23 @@ Partial Class Form1
         Me.Panel2.Size = New System.Drawing.Size(2309, 129)
         Me.Panel2.TabIndex = 22
         '
+        'Button13
+        '
+        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button13.Enabled = False
+        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button13.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.Image = CType(resources.GetObject("Button13.Image"), System.Drawing.Image)
+        Me.Button13.Location = New System.Drawing.Point(1009, 3)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(90, 90)
+        Me.Button13.TabIndex = 25
+        Me.Button13.Text = "Ventas"
+        Me.Button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button13.UseVisualStyleBackColor = True
+        '
         'Button12
         '
         Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
@@ -90,7 +107,7 @@ Partial Class Form1
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(90, 90)
         Me.Button12.TabIndex = 24
-        Me.Button12.Text = "Compras"
+        Me.Button12.Text = "Productos"
         Me.Button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button12.UseVisualStyleBackColor = True
         '
@@ -330,23 +347,6 @@ Partial Class Form1
         Me.Button3.Text = "Reportes"
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button13.Enabled = False
-        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button13.FlatAppearance.BorderSize = 0
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button13.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Image = CType(resources.GetObject("Button13.Image"), System.Drawing.Image)
-        Me.Button13.Location = New System.Drawing.Point(1009, 3)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(90, 90)
-        Me.Button13.TabIndex = 25
-        Me.Button13.Text = "Ventas"
-        Me.Button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button13.UseVisualStyleBackColor = True
         '
         'Form1
         '
