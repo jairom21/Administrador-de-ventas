@@ -61,22 +61,99 @@ Public Class Configuracion
             'crea tablas
             'tabla config
 
-            Dim objCmd11 As New MySqlCommand("Create Table usuario( usu Varchar(100),  clave Varchar(100), nomb Varchar(100), conf Varchar(100), fact Varchar(100), vent Varchar(100), inv  Varchar(100), comp Varchar(100), clie Varchar(100), rep  Varchar(100))", objConn)
-
-            objCmd11.CommandType = CommandType.Text
-
-            objCmd11.ExecuteNonQuery()
-
-
-            Dim objCmd12 As New MySqlCommand("CREATE TABLE IF Not EXISTS `cliente` ( `id` int(11) Not NULL AUTO_INCREMENT, `nombre` varchar(150) Not NULL DEFAULT '0',  `apellido` varchar(150) Not NULL DEFAULT '0',  `telf` varchar(50) Not NULL DEFAULT '0',  `direccion` varchar(500) Not NULL DEFAULT '0',  `rut` varchar(500) Not NULL DEFAULT '0',  PRIMARY KEY(`id`)) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;", objConn)
+            Dim objCmd12 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `cliente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(150) NOT NULL DEFAULT '0',
+  `apellido` varchar(150) NOT NULL DEFAULT '0',
+  `telf` varchar(50) NOT NULL DEFAULT '0',
+  `direccion` varchar(500) NOT NULL DEFAULT '0',
+  `rut` varchar(500) NOT NULL DEFAULT '0',
+  `id_usuario` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;", objConn)
 
             objCmd12.CommandType = CommandType.Text
 
             objCmd12.ExecuteNonQuery()
 
+            Dim objCmd14 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `facturas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tprecio` decimal(15,2) NOT NULL DEFAULT '0.00',
+  `iva` decimal(15,2) NOT NULL DEFAULT '0.00',
+  `fecha` datetime NOT NULL,
+  `id_usuario` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
+
+            objCmd14.CommandType = CommandType.Text
+
+            objCmd14.ExecuteNonQuery()
+
+            Dim objCmd15 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `inv` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(500) NOT NULL DEFAULT '0',
+  `cant` int(11) NOT NULL DEFAULT '0',
+  `fecha` datetime NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `costo` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
+
+            objCmd15.CommandType = CommandType.Text
+
+            objCmd15.ExecuteNonQuery()
+
+            Dim objCmd16 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_producto` int(11) NOT NULL DEFAULT '0',
+  `precio` decimal(15,2) NOT NULL DEFAULT '0.00',
+  `iva` decimal(15,2) NOT NULL DEFAULT '0.00',
+  `id_factura` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
+
+            objCmd16.CommandType = CommandType.Text
+
+            objCmd16.ExecuteNonQuery()
+
+            Dim objCmd17 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `productos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(500) NOT NULL DEFAULT '0',
+  `precio` decimal(15,2) NOT NULL DEFAULT '0.00',
+  `codigo` varchar(50) NOT NULL DEFAULT '0',
+  `id_usuario` int(11) NOT NULL DEFAULT '0',
+  `cuchara` int(11) NOT NULL DEFAULT '0',
+  `cono` int(11) NOT NULL DEFAULT '0',
+  `tina` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;", objConn)
+
+            objCmd17.CommandType = CommandType.Text
+
+            objCmd17.ExecuteNonQuery()
 
 
-            Dim objCmd13 As New MySqlCommand("INSERT INTO `usuario` (`usu`, `clave`, `nomb`, `conf`, `fact`, `vent`, `inv`, `comp`, `clie`, `rep`) VALUES ('master', '12345', '1', '1', '1', '1', '1', '1', '1', '1')", objConn)
+            Dim objCmd18 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `usuario` (
+  `usu` varchar(100) DEFAULT NULL,
+  `clave` varchar(100) DEFAULT NULL,
+  `nomb` varchar(100) DEFAULT NULL,
+  `conf` varchar(100) DEFAULT NULL,
+  `fact` varchar(100) DEFAULT NULL,
+  `vent` varchar(100) DEFAULT NULL,
+  `inv` varchar(100) DEFAULT NULL,
+  `comp` varchar(100) DEFAULT NULL,
+  `clie` varchar(100) DEFAULT NULL,
+  `rep` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
+
+            objCmd18.CommandType = CommandType.Text
+
+            objCmd18.ExecuteNonQuery()
+
+
+
+            Dim objCmd13 As New MySqlCommand("INSERT INTO `usuario` (`usu`, `clave`, `nomb`, `conf`, `fact`, `vent`, `inv`, `comp`, `clie`, `rep`) VALUES
+	('master', '12345', '1', '1', '1', '1', '1', '1', '1', '1');", objConn)
 
             objCmd13.ExecuteReader()
             objConn.Close()
