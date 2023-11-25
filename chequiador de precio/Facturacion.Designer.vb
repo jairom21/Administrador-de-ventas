@@ -50,6 +50,7 @@ Partial Class Facturacion
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -152,8 +153,10 @@ Partial Class Facturacion
         '
         Me.TextBox3.Location = New System.Drawing.Point(597, 71)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(116, 20)
         Me.TextBox3.TabIndex = 11
+        Me.TextBox3.Text = "0.00"
         '
         'TextBox4
         '
@@ -290,11 +293,22 @@ Partial Class Facturacion
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(22, 118)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(55, 13)
+        Me.Label12.TabIndex = 74
+        Me.Label12.Text = "Direccion:"
+        Me.Label12.Visible = False
+        '
         'Facturacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 608)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label11)
@@ -352,4 +366,5 @@ Partial Class Facturacion
     Friend WithEvents Label11 As Label
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Label12 As Label
 End Class

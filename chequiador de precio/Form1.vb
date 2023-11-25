@@ -236,4 +236,8 @@ Public Class Form1
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Inv.ShowDialog()
     End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Ventas.ShowDialog()
+    End Sub
 End Class

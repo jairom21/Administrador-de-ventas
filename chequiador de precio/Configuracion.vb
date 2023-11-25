@@ -68,6 +68,7 @@ Public Class Configuracion
   `telf` varchar(50) NOT NULL DEFAULT '0',
   `direccion` varchar(500) NOT NULL DEFAULT '0',
   `rut` varchar(500) NOT NULL DEFAULT '0',
+  `rut_clien` varchar(500) NOT NULL DEFAULT '0',
   `id_usuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;", objConn)

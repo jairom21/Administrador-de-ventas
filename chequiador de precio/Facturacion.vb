@@ -19,6 +19,8 @@ Public Class Facturacion
 
             Label10.Text = lex("direccion")
 
+            Label12.Text = lex("rut")
+
         Catch ex As Exception
             Ncliente.ShowDialog()
         End Try
@@ -182,7 +184,7 @@ Public Class Facturacion
                 End If
             End If
 
-            TextBox1.Clear() ' Limpiar el TextBox después de procesar el código
+            TextBox5.Clear() ' Limpiar el TextBox después de procesar el código
         End If
     End Sub
     Private Function BuscarProductoEnDataGridView(ByVal codigo As String) As Integer
@@ -203,7 +205,36 @@ Public Class Facturacion
         Lproductos.ShowDialog()
     End Sub
 
-    Private Sub Facturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        cnnx.Open()
+        Dim fechaYHoraActual As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        Dim consult As New MySqlCommand("insert into facturas (  tprecio, fecha, iva, id_usuario,rut_clien) values ('" & TextBox4.Text & "','" & fechaYHoraActual & "','" & TextBox3.Text & "','" & Form1.entrada & "','" & Label12.Text & "')", cnnx)
+        Dim le As MySqlDataReader
+        le = consult.ExecuteReader
+        le.Close()
+
+        Dim consul As New MySqlCommand("select MAX(id) from facturas where id_usuario='" & Form1.entrada & "'", cnnx)
+        le = consul.ExecuteReader
+        le.Read()
+        Dim max_id = le(0)
+        le.Close()
+
+        Dim prec As String
+
+
+
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            prec = row.Cells("precio").Value
+            Dim consult2 As New MySqlCommand("insert into items (  id_producto, precio, iva, id_factura, cant) values ('" & row.Cells("Codigo").Value & "','" & prec.Replace(",", ".") & "','1','" & max_id & "','" & row.Cells("cant").Value & "')", cnnx)
+            consult2.ExecuteNonQuery()
+
+        Next
+        cnnx.Close()
+
+        Me.Close()
     End Sub
+
+
 End Class
