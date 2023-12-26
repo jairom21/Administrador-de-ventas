@@ -60,6 +60,18 @@ Partial Class Configuracion
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +81,8 @@ Partial Class Configuracion
         Me.TabPage2.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -480,6 +494,7 @@ Partial Class Configuracion
         Me.TabControl1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.TabControl1.Location = New System.Drawing.Point(1, 72)
         Me.TabControl1.Name = "TabControl1"
@@ -487,6 +502,136 @@ Partial Class Configuracion
         Me.TabControl1.Size = New System.Drawing.Size(791, 545)
         Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.TabControl1.TabIndex = 60
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.GroupBox1)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(783, 519)
+        Me.TabPage3.TabIndex = 8
+        Me.TabPage3.Text = "Empresa"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Button7)
+        Me.GroupBox1.Controls.Add(Me.TextBox10)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.TextBox9)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Button9)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(756, 507)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Datos de la Empresa"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(166, 80)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(298, 22)
+        Me.TextBox4.TabIndex = 7
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(166, 116)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox8.Size = New System.Drawing.Size(298, 22)
+        Me.TextBox8.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(25, 82)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 14)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Telefono:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(25, 116)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(24, 14)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Nif:"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(167, 45)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(297, 22)
+        Me.TextBox9.TabIndex = 3
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(25, 48)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(136, 14)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "Nombre de la empresa:"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(167, 153)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox10.Size = New System.Drawing.Size(297, 22)
+        Me.TextBox10.TabIndex = 10
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(26, 153)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 14)
+        Me.Label8.TabIndex = 9
+        Me.Label8.Text = "Pagina web:"
+        '
+        'Button9
+        '
+        Me.Button9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button9.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
+        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button9.Location = New System.Drawing.Point(393, 239)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(71, 30)
+        Me.Button9.TabIndex = 2
+        Me.Button9.Text = "Volver"
+        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button7.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(298, 239)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 30)
+        Me.Button7.TabIndex = 17
+        Me.Button7.Text = "Guardar"
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Configuracion
         '
@@ -508,6 +653,9 @@ Partial Class Configuracion
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -545,4 +693,16 @@ Partial Class Configuracion
     Friend WithEvents Label4 As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button9 As Button
 End Class

@@ -68,7 +68,6 @@ Public Class Configuracion
   `telf` varchar(50) NOT NULL DEFAULT '0',
   `direccion` varchar(500) NOT NULL DEFAULT '0',
   `rut` varchar(500) NOT NULL DEFAULT '0',
-  `rut_clien` varchar(500) NOT NULL DEFAULT '0',
   `id_usuario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;", objConn)
@@ -82,9 +81,13 @@ Public Class Configuracion
   `tprecio` decimal(15,2) NOT NULL DEFAULT '0.00',
   `iva` decimal(15,2) NOT NULL DEFAULT '0.00',
   `fecha` datetime NOT NULL,
-  `id_usuario` int(11) NOT NULL DEFAULT '0',
+  `id_usuario` varchar(50) NOT NULL DEFAULT '0',
+  `rut_clien` varchar(50) NOT NULL DEFAULT '0',
+  `efectivo` decimal(15,2) DEFAULT NULL,
+  `tarjeta` decimal(15,2) DEFAULT NULL,
+  `fiao` decimal(15,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;", objConn)
 
             objCmd14.CommandType = CommandType.Text
 
@@ -110,6 +113,7 @@ Public Class Configuracion
   `precio` decimal(15,2) NOT NULL DEFAULT '0.00',
   `iva` decimal(15,2) NOT NULL DEFAULT '0.00',
   `id_factura` int(11) DEFAULT '0',
+  `cant` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
 
@@ -126,6 +130,8 @@ Public Class Configuracion
   `cuchara` int(11) NOT NULL DEFAULT '0',
   `cono` int(11) NOT NULL DEFAULT '0',
   `tina` int(11) NOT NULL DEFAULT '0',
+   `cant` int(11) NOT NULL DEFAULT '0',
+`disp` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;", objConn)
 

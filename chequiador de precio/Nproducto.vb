@@ -11,13 +11,13 @@ Public Class Nproducto
 
         cnnx.Open()
 
-        Dim consult As New MySqlCommand("insert into productos ( codigo, descripcion, cuchara, tina, cono,precio ) values ('" & TextBox5.Text & "','" & TextBox1.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox6.Text & "','" & TextBox2.Text & "')", cnnx)
+        Dim consult As New MySqlCommand("insert into productos ( codigo, descripcion, cuchara, tina, cono,precio,cant ) values ('" & TextBox5.Text & "','" & TextBox1.Text & "','" & NumericUpDown4.Value & "','" & NumericUpDown2.Value & "','" & NumericUpDown3.Value & "','" & TextBox2.Text & "','" & NumericUpDown1.Value & "')", cnnx)
         Dim le As MySqlDataReader
         le = consult.ExecuteReader
         le.Close()
 
 
-        Dim consultan = "select codigo, descripcion, cuchara, tina,cono,precio from productos"
+        Dim consultan = "select codigo, descripcion, cuchara, tina,cono,cant,precio from productos"
         Dim da As MySqlDataAdapter = New MySqlDataAdapter(consultan, cnnx)
         Dim ds As DataSet = New DataSet()
 
@@ -35,14 +35,16 @@ Public Class Nproducto
         Compras.DataGridView1.Columns.Item(2).HeaderText = "Cuchara"
         Compras.DataGridView1.Columns.Item(3).HeaderText = "Vaso"
         Compras.DataGridView1.Columns.Item(4).HeaderText = "Barquilla"
-        Compras.DataGridView1.Columns.Item(5).HeaderText = "Precio"
+        Compras.DataGridView1.Columns.Item(5).HeaderText = "Cant."
+        Compras.DataGridView1.Columns.Item(6).HeaderText = "Precio"
 
 
         Compras.DataGridView1.Columns.Item(0).Width = 75
-        Compras.DataGridView1.Columns.Item(1).Width = 340
+        Compras.DataGridView1.Columns.Item(1).Width = 265
         Compras.DataGridView1.Columns.Item(2).Width = 75
         Compras.DataGridView1.Columns.Item(3).Width = 75
         Compras.DataGridView1.Columns.Item(4).Width = 75
+        Compras.DataGridView1.Columns.Item(5).Width = 75
         Compras.DataGridView1.Columns.Item(5).Width = 75
 
         Compras.DataGridView1.ReadOnly = True

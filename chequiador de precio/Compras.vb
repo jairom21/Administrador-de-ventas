@@ -7,7 +7,7 @@ Public Class Compras
 
 
     Private Sub Compras_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim consultan = "select codigo, descripcion, cuchara, tina,cono,precio from productos"
+        Dim consultan = "select codigo, descripcion, cuchara, tina,cono,cant,precio from productos"
         Dim da As MySqlDataAdapter = New MySqlDataAdapter(consultan, cnnx)
         Dim ds As DataSet = New DataSet()
 
@@ -24,16 +24,18 @@ Public Class Compras
         DataGridView1.Columns.Item(1).HeaderText = "Descripcion"
         DataGridView1.Columns.Item(2).HeaderText = "Cuchara"
         DataGridView1.Columns.Item(3).HeaderText = "Vaso"
+        DataGridView1.Columns.Item(5).HeaderText = "Cant."
         DataGridView1.Columns.Item(4).HeaderText = "Barquilla"
-        DataGridView1.Columns.Item(5).HeaderText = "Precio"
+        DataGridView1.Columns.Item(6).HeaderText = "Precio"
 
 
         DataGridView1.Columns.Item(0).Width = 75
-        DataGridView1.Columns.Item(1).Width = 340
+        DataGridView1.Columns.Item(1).Width = 265
         DataGridView1.Columns.Item(2).Width = 75
         DataGridView1.Columns.Item(3).Width = 75
         DataGridView1.Columns.Item(4).Width = 75
         DataGridView1.Columns.Item(5).Width = 75
+        DataGridView1.Columns.Item(6).Width = 75
 
         DataGridView1.ReadOnly = True
 
@@ -51,5 +53,9 @@ Public Class Compras
 
 
 
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
     End Sub
 End Class

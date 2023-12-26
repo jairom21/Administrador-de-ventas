@@ -24,14 +24,11 @@ Partial Class Lproductos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lproductos))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,33 +41,11 @@ Partial Class Lproductos
         Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.GhostWhite
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Descripcion, Me.Precio})
         Me.DataGridView1.GridColor = System.Drawing.Color.GhostWhite
         Me.DataGridView1.Location = New System.Drawing.Point(7, 75)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(597, 356)
         Me.DataGridView1.TabIndex = 14
-        '
-        'Codigo
-        '
-        Me.Codigo.Frozen = True
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        '
-        'Descripcion
-        '
-        Me.Descripcion.Frozen = True
-        Me.Descripcion.HeaderText = "Descripcion"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        Me.Descripcion.Width = 350
-        '
-        'Precio
-        '
-        Me.Precio.Frozen = True
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
         '
         'GroupBox1
         '
@@ -87,6 +62,16 @@ Partial Class Lproductos
         Me.GroupBox1.TabIndex = 59
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Busqueda:"
+        '
+        'Button6
+        '
+        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
+        Me.Button6.Location = New System.Drawing.Point(453, 14)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(30, 30)
+        Me.Button6.TabIndex = 60
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -121,16 +106,6 @@ Partial Class Lproductos
         Me.Label2.Size = New System.Drawing.Size(75, 14)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Descripcion:"
-        '
-        'Button6
-        '
-        Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(453, 14)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(30, 30)
-        Me.Button6.TabIndex = 60
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -170,6 +145,7 @@ Partial Class Lproductos
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Lproductos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lista de Productos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -179,9 +155,6 @@ Partial Class Lproductos
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Codigo As DataGridViewTextBoxColumn
-    Friend WithEvents Descripcion As DataGridViewTextBoxColumn
-    Friend WithEvents Precio As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button6 As Button
     Friend WithEvents Button4 As Button

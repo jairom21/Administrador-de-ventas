@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cinv.Designer.vb">
+      <DependentUpon>cinv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cinv.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,12 @@
     <Compile Include="Ncliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ninv.Designer.vb">
+      <DependentUpon>Ninv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ninv.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Nproducto.Designer.vb">
       <DependentUpon>Nproducto.vb</DependentUpon>
     </Compile>
@@ -164,6 +176,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="cinv.resx">
+      <DependentUpon>cinv.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ncliente.resx">
       <DependentUpon>Ncliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ninv.resx">
+      <DependentUpon>Ninv.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nproducto.resx">
       <DependentUpon>Nproducto.vb</DependentUpon>
