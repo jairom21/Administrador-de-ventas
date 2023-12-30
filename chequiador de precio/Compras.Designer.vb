@@ -99,7 +99,7 @@ Partial Class Compras
         '
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(280, 13)
+        Me.Button6.Location = New System.Drawing.Point(460, 14)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(30, 30)
         Me.Button6.TabIndex = 13
@@ -112,7 +112,7 @@ Partial Class Compras
         Me.Button4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(201, 13)
+        Me.Button4.Location = New System.Drawing.Point(381, 14)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(69, 30)
         Me.Button4.TabIndex = 5
@@ -125,7 +125,7 @@ Partial Class Compras
         Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox1.Location = New System.Drawing.Point(100, 19)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(95, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(247, 20)
         Me.TextBox1.TabIndex = 12
         '
         'Label2
@@ -135,9 +135,9 @@ Partial Class Compras
         Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(14, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 14)
+        Me.Label2.Size = New System.Drawing.Size(80, 14)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Buscar por:"
+        Me.Label2.Text = "Descripcionr:"
         '
         'Compras
         '

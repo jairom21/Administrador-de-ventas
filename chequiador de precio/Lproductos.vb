@@ -30,19 +30,27 @@ Public Class Lproductos
 
 
         DataGridView1.Columns.Item(0).Width = 75
-        DataGridView1.Columns.Item(1).Width = 340
+        DataGridView1.Columns.Item(1).Width = 400
         DataGridView1.Columns.Item(2).Width = 75
 
 
         DataGridView1.ReadOnly = True
 
         cnnx.Close()
+        DataGridView1.RowsDefaultCellStyle.BackColor = Color.White
+        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(CType(255, Byte), CType(244, Byte), CType(215, Byte))
 
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Facturacion.TextBox5.Text = 0
+        Dim sel = Me.DataGridView1.CurrentCellAddress.Y
+
+        Dim tot = DataGridView1.Item(0, sel).Value
+
+
+        Facturacion.TextBox5.Text = tot
+
         Me.Close()
     End Sub
 
@@ -106,5 +114,16 @@ Public Class Lproductos
 
         cnnx.Close()
 
+    End Sub
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Dim sel = Me.DataGridView1.CurrentCellAddress.Y
+
+        Dim tot = DataGridView1.Item(0, sel).Value
+
+
+        Facturacion.TextBox5.Text = tot
+
+        Me.Close()
     End Sub
 End Class

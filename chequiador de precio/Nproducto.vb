@@ -12,44 +12,16 @@ Public Class Nproducto
         cnnx.Open()
 
         Dim consult As New MySqlCommand("insert into productos ( codigo, descripcion, cuchara, tina, cono,precio,cant ) values ('" & TextBox5.Text & "','" & TextBox1.Text & "','" & NumericUpDown4.Value & "','" & NumericUpDown2.Value & "','" & NumericUpDown3.Value & "','" & TextBox2.Text & "','" & NumericUpDown1.Value & "')", cnnx)
-        Dim le As MySqlDataReader
-        le = consult.ExecuteReader
-        le.Close()
+
+        consult.ExecuteNonQuery()
 
 
-        Dim consultan = "select codigo, descripcion, cuchara, tina,cono,cant,precio from productos"
-        Dim da As MySqlDataAdapter = New MySqlDataAdapter(consultan, cnnx)
-        Dim ds As DataSet = New DataSet()
-
-
-        Compras.DataGridView1.RowsDefaultCellStyle.BackColor = Color.White
-        Compras.DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(CType(255, Byte), CType(244, Byte), CType(215, Byte))
-
-        'Try
-        'cargar tabla de nominas
-
-        da.Fill(ds, "s")
-        Compras.DataGridView1.DataSource = ds.Tables("s")
-        Compras.DataGridView1.Columns.Item(0).HeaderText = "Codigo"
-        Compras.DataGridView1.Columns.Item(1).HeaderText = "Descripcion"
-        Compras.DataGridView1.Columns.Item(2).HeaderText = "Cuchara"
-        Compras.DataGridView1.Columns.Item(3).HeaderText = "Vaso"
-        Compras.DataGridView1.Columns.Item(4).HeaderText = "Barquilla"
-        Compras.DataGridView1.Columns.Item(5).HeaderText = "Cant."
-        Compras.DataGridView1.Columns.Item(6).HeaderText = "Precio"
-
-
-        Compras.DataGridView1.Columns.Item(0).Width = 75
-        Compras.DataGridView1.Columns.Item(1).Width = 265
-        Compras.DataGridView1.Columns.Item(2).Width = 75
-        Compras.DataGridView1.Columns.Item(3).Width = 75
-        Compras.DataGridView1.Columns.Item(4).Width = 75
-        Compras.DataGridView1.Columns.Item(5).Width = 75
-        Compras.DataGridView1.Columns.Item(5).Width = 75
-
-        Compras.DataGridView1.ReadOnly = True
 
         cnnx.Close()
+
+
+        Compras.cargartodo()
+
 
         MsgBox("Producto creado exitosamente")
 
@@ -67,5 +39,7 @@ Public Class Nproducto
         Me.Close()
     End Sub
 
+    Private Sub Nproducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

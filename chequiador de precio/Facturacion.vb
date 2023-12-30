@@ -282,7 +282,6 @@ Public Class Facturacion
 
             Dim consult6 As New MySqlCommand("Update productos SET disp=disp-(" & tina1(x) * row.Cells("cant").Value & ") WHERE descripcion='tina'", cnnx)
             consult6.ExecuteNonQuery()
-            MsgBox("Update productos SET disp=disp-(" & cuchara1(x) & "---" & row.Cells("cant").Value & ") WHERE descripcion='cuchara'")
             x = x + 1
         Next
         cnnx.Close()
@@ -309,9 +308,25 @@ Public Class Facturacion
             pd.Print()
         End If
 
-
+        limpiar()
         Me.Close()
     End Sub
+    Private Sub limpiar()
+        TextBox1.Text = ""
+        TextBox5.Text = ""
+        Label9.Text = ""
+        Label10.Text = ""
+        TextBox2.Text = "0.00"
+        TextBox3.Text = "0.00"
+        TextBox4.Text = "0.00"
+        TextBox6.Text = "0"
+        TextBox7.Text = "0"
+        TextBox8.Text = "0"
+
+        Label12.Text = ""
+        DataGridView1.Rows.Clear()
+    End Sub
+
 
     Private Sub ImprimirContenido(ByVal sender As Object, ByVal e As Printing.PrintPageEventArgs)
         Dim contenidof As String
@@ -373,6 +388,8 @@ Public Class Facturacion
     End Sub
 
     Private Sub Facturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView1.RowsDefaultCellStyle.BackColor = Color.White
+        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(CType(255, Byte), CType(244, Byte), CType(215, Byte))
 
         ComboBox1.SelectedIndex = 0
         cnnx.Open()
@@ -420,20 +437,53 @@ Public Class Facturacion
     Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
 
         Try
-            a = TextBox4.Text
-            b = TextBox7.Text
-            ' Mostrar los números ingresados en TextBox1
-            a = a - b
-            a = -a
-            TextBox8.Text = a.ToString
-            If a >= 0 Then
-                Button3.Enabled = True
+
+            If ComboBox1.SelectedIndex = 2 Then
+                a = TextBox4.Text
+                b = TextBox7.Text
+                ' Mostrar los números ingresados en TextBox1
+                a = a - b
+                If a >= 0 Then
+                    TextBox6.Text = a.ToString
+                    TextBox8.Text = 0
+                Else
+                    TextBox6.Text = 0
+                    TextBox8.Text = a.ToString
+                End If
+
+
+                If TextBox7.Text = "" Then
+                    Button3.Enabled = False
+                Else
+                    Button3.Enabled = True
+                End If
+
+
             Else
-                Button3.Enabled = False
+                a = TextBox4.Text
+                b = TextBox7.Text
+                ' Mostrar los números ingresados en TextBox1
+                a = a - b
+                a = -a
+                TextBox8.Text = a.ToString
+                If a >= 0 Then
+                    Button3.Enabled = True
+                Else
+                    Button3.Enabled = False
+                End If
+
+
+
             End If
 
-        Catch ex As Exception
 
+
+        Catch ex As Exception
+            If TextBox7.Text = "" Then
+                Button3.Enabled = False
+            Else
+                Button3.Enabled = True
+            End If
         End Try
 
     End Sub
@@ -445,14 +495,39 @@ Public Class Facturacion
 
         Dim tot = DataGridView1.Item(3, sel).Value
 
+        ' Suponiendo que tienes una función para verificar si el producto ya está en el DataGridView
+        ' Dim rowIndex As Integer = BuscarProductoEnDataGridView(Codigo)
+        Dim total As Decimal
+        Dim total2 As Decimal
+
         If e.ColumnIndex = 6 Then
             DataGridView1.Rows.RemoveAt(e.RowIndex)
 
 
 
+            i = 0
+            For Each row As DataGridViewRow In DataGridView1.Rows
+
+                total = Convert.ToInt32(DataGridView1.Rows(i).Cells("total").Value)
+                total2 = total2 + total
+                i = i + 1
+            Next
+
+
+            'TextBox4.Text = total2
+
+            TextBox2.Text = total2
+            TextBox3.Text = total2 * 0.19
+            TextBox4.Text = (total2 * 0.19) + total2
+            TextBox7.Text = (total2 * 0.19) + total2
+
 
         End If
 
+
+    End Sub
+
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
 
     End Sub
 

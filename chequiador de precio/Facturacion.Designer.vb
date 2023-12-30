@@ -32,6 +32,12 @@ Partial Class Facturacion
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.N = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -53,12 +59,6 @@ Partial Class Facturacion
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.N = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -155,6 +155,52 @@ Partial Class Facturacion
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(770, 367)
         Me.DataGridView1.TabIndex = 13
+        '
+        'N
+        '
+        Me.N.FillWeight = 25.0!
+        Me.N.Frozen = True
+        Me.N.HeaderText = "N°"
+        Me.N.Name = "N"
+        Me.N.ReadOnly = True
+        Me.N.Width = 44
+        '
+        'Codigo
+        '
+        Me.Codigo.Frozen = True
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.Width = 75
+        '
+        'Descripcion
+        '
+        Me.Descripcion.FillWeight = 300.0!
+        Me.Descripcion.Frozen = True
+        Me.Descripcion.HeaderText = "Descripcion"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.ReadOnly = True
+        Me.Descripcion.Width = 300
+        '
+        'Cant
+        '
+        Me.Cant.Frozen = True
+        Me.Cant.HeaderText = "Cant."
+        Me.Cant.Name = "Cant"
+        Me.Cant.Width = 75
+        '
+        'Precio
+        '
+        Me.Precio.Frozen = True
+        Me.Precio.HeaderText = "Precio U"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        '
+        'total
+        '
+        Me.total.Frozen = True
+        Me.total.HeaderText = "Total"
+        Me.total.Name = "total"
+        Me.total.ReadOnly = True
         '
         'Label9
         '
@@ -357,52 +403,6 @@ Partial Class Facturacion
         Me.Label16.Size = New System.Drawing.Size(52, 13)
         Me.Label16.TabIndex = 87
         Me.Label16.Text = "Cambio:"
-        '
-        'N
-        '
-        Me.N.FillWeight = 25.0!
-        Me.N.Frozen = True
-        Me.N.HeaderText = "N°"
-        Me.N.Name = "N"
-        Me.N.ReadOnly = True
-        Me.N.Width = 44
-        '
-        'Codigo
-        '
-        Me.Codigo.Frozen = True
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.Width = 75
-        '
-        'Descripcion
-        '
-        Me.Descripcion.FillWeight = 300.0!
-        Me.Descripcion.Frozen = True
-        Me.Descripcion.HeaderText = "Descripcion"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        Me.Descripcion.Width = 300
-        '
-        'Cant
-        '
-        Me.Cant.Frozen = True
-        Me.Cant.HeaderText = "Cant."
-        Me.Cant.Name = "Cant"
-        Me.Cant.Width = 75
-        '
-        'Precio
-        '
-        Me.Precio.Frozen = True
-        Me.Precio.HeaderText = "Precio U"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        '
-        'total
-        '
-        Me.total.Frozen = True
-        Me.total.HeaderText = "Total"
-        Me.total.Name = "total"
-        Me.total.ReadOnly = True
         '
         'Facturacion
         '

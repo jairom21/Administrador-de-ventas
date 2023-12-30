@@ -86,6 +86,12 @@
     <Compile Include="cinv.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="clientedit.Designer.vb">
+      <DependentUpon>clientedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,12 @@
     <Compile Include="Nproducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="prodedit.Designer.vb">
+      <DependentUpon>prodedit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prodedit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas.Designer.vb">
       <DependentUpon>Ventas.vb</DependentUpon>
     </Compile>
@@ -178,6 +190,9 @@
   <ItemGroup>
     <EmbeddedResource Include="cinv.resx">
       <DependentUpon>cinv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientedit.resx">
+      <DependentUpon>clientedit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
@@ -218,6 +233,9 @@
     <EmbeddedResource Include="Nproducto.resx">
       <DependentUpon>Nproducto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="prodedit.resx">
+      <DependentUpon>prodedit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.vb</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +252,10 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\cancel.png" />
+    <Content Include="img\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
