@@ -11,7 +11,7 @@ Public Class Nproducto
 
         cnnx.Open()
 
-        Dim consult As New MySqlCommand("insert into productos ( codigo, descripcion, cuchara, tina, cono,precio,cant ) values ('" & TextBox5.Text & "','" & TextBox1.Text & "','" & NumericUpDown4.Value & "','" & NumericUpDown2.Value & "','" & NumericUpDown3.Value & "','" & TextBox2.Text & "','" & NumericUpDown1.Value & "')", cnnx)
+        Dim consult As New MySqlCommand("insert into productos ( codigo, descripcion, cuchara, tina, cono,precio,cant,disp ) values ('" & TextBox5.Text & "','" & TextBox1.Text & "','" & NumericUpDown4.Value & "','" & NumericUpDown2.Value & "','" & NumericUpDown3.Value & "','" & TextBox2.Text & "','" & NumericUpDown1.Value & "',0)", cnnx)
 
         consult.ExecuteNonQuery()
 
