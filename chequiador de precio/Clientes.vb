@@ -5,7 +5,7 @@ Public Class Clientes
     Dim cnnx As New MySqlConnection(
                     "Server=" & Form1.kine(0) & ";database=bdadmin_ventas;User ID=" & Form1.kine(1) & ";Password=" & Form1.kine(2) & "")
 
-    Private Sub cargartodo()
+    Public Sub cargartodo()
 
 
 
@@ -156,27 +156,8 @@ Public Class Clientes
         ' Dim rowIndex As Integer = BuscarProductoEnDataGridView(Codigo)
 
 
-        If e.ColumnIndex = 7 Then
-            prodedit.ShowDialog()
-
-
-        ElseIf e.ColumnIndex = 8 Then
-            Dim resultado As DialogResult = MessageBox.Show("¿Estás seguro que desea eliminar este producto?", "Confirmación", MessageBoxButtons.YesNo)
-            If resultado = DialogResult.Yes Then
-
-                cnnx.Open()
-                Dim consultax As New MySqlCommand("delete from productos where codigo = '" & tot & "'", cnnx)
-
-                consultax.ExecuteNonQuery()
-
-                cargartodo()
-
-
-
-
-            Else
-
-            End If
+        If e.ColumnIndex = 5 Then
+            clientedit.ShowDialog()
 
 
         End If

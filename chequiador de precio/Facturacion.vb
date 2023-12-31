@@ -181,10 +181,10 @@ Public Class Facturacion
                 Next
 
 
-                TextBox2.Text = total2
+                TextBox2.Text = total2 - (total2 * 0.19)
                 TextBox3.Text = total2 * 0.19
-                TextBox4.Text = (total2 * 0.19) + total2
-                TextBox7.Text = (total2 * 0.19) + total2
+                TextBox4.Text = total2
+                TextBox7.Text = total2
 
             Else
 
@@ -211,10 +211,10 @@ Public Class Facturacion
 
                     'TextBox4.Text = total2
 
-                    TextBox2.Text = total2
+                    TextBox2.Text = total2 - (total2 * 0.19)
                     TextBox3.Text = total2 * 0.19
-                    TextBox4.Text = (total2 * 0.19) + total2
-                    TextBox7.Text = (total2 * 0.19) + total2
+                    TextBox4.Text = total2
+                    TextBox7.Text = total2
 
 
                 Else
@@ -516,10 +516,10 @@ Public Class Facturacion
 
             'TextBox4.Text = total2
 
-            TextBox2.Text = total2
+            TextBox2.Text = total2 - (total2 * 0.19)
             TextBox3.Text = total2 * 0.19
-            TextBox4.Text = (total2 * 0.19) + total2
-            TextBox7.Text = (total2 * 0.19) + total2
+            TextBox4.Text = total2
+            TextBox7.Text = total2
 
 
         End If

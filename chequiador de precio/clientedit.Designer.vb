@@ -177,6 +177,7 @@ Partial Class clientedit
         '
         'TextBox5
         '
+        Me.TextBox5.Enabled = False
         Me.TextBox5.Location = New System.Drawing.Point(82, 89)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(198, 20)
@@ -212,6 +213,7 @@ Partial Class clientedit
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "clientedit"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Editar Cliente"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

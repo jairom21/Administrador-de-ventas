@@ -40,6 +40,7 @@ Partial Class Form1
         Me.CloseButton = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,6 +58,7 @@ Partial Class Form1
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Button14)
         Me.Panel2.Controls.Add(Me.Button13)
         Me.Panel2.Controls.Add(Me.Button12)
         Me.Panel2.Controls.Add(Me.Button11)
@@ -175,7 +177,7 @@ Partial Class Form1
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.Location = New System.Drawing.Point(1207, 3)
+        Me.Button8.Location = New System.Drawing.Point(1304, 3)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(90, 90)
         Me.Button8.TabIndex = 23
@@ -196,7 +198,7 @@ Partial Class Form1
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(1307, 3)
+        Me.Button7.Location = New System.Drawing.Point(1404, 3)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(90, 90)
         Me.Button7.TabIndex = 23
@@ -306,7 +308,7 @@ Partial Class Form1
         Me.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.CloseButton.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CloseButton.Image = CType(resources.GetObject("CloseButton.Image"), System.Drawing.Image)
-        Me.CloseButton.Location = New System.Drawing.Point(1443, 3)
+        Me.CloseButton.Location = New System.Drawing.Point(1501, 3)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(90, 90)
         Me.CloseButton.TabIndex = 13
@@ -348,11 +350,28 @@ Partial Class Form1
         Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button14
+        '
+        Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button14.Enabled = False
+        Me.Button14.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button14.FlatAppearance.BorderSize = 0
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button14.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.Image = CType(resources.GetObject("Button14.Image"), System.Drawing.Image)
+        Me.Button14.Location = New System.Drawing.Point(1205, 3)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(90, 90)
+        Me.Button14.TabIndex = 26
+        Me.Button14.Text = "Deudores"
+        Me.Button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button14.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(837, 404)
+        Me.ClientSize = New System.Drawing.Size(895, 404)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -379,4 +398,5 @@ Partial Class Form1
     Friend WithEvents Button7 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
 End Class

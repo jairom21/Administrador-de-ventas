@@ -141,6 +141,7 @@ Public Class Configuracion
 
 
             Dim objCmd18 As New MySqlCommand("CREATE TABLE IF NOT EXISTS `usuario` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
   `usu` varchar(100) DEFAULT NULL,
   `clave` varchar(100) DEFAULT NULL,
   `nomb` varchar(100) DEFAULT NULL,
@@ -150,7 +151,8 @@ Public Class Configuracion
   `inv` varchar(100) DEFAULT NULL,
   `comp` varchar(100) DEFAULT NULL,
   `clie` varchar(100) DEFAULT NULL,
-  `rep` varchar(100) DEFAULT NULL
+  `rep` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;", objConn)
 
             objCmd18.CommandType = CommandType.Text
@@ -162,8 +164,18 @@ Public Class Configuracion
             Dim objCmd13 As New MySqlCommand("INSERT INTO `usuario` (`usu`, `clave`, `nomb`, `conf`, `fact`, `vent`, `inv`, `comp`, `clie`, `rep`) VALUES
 	('master', '12345', '1', '1', '1', '1', '1', '1', '1', '1');", objConn)
 
-            objCmd13.ExecuteReader()
+            objCmd13.ExecuteNonQuery()
+
+            Dim objCmd20 As New MySqlCommand("INSERT INTO `facturas` (`id`, `tprecio`, `iva`, `fecha`, `id_usuario`, `rut_clien`, `efectivo`, `tarjeta`, `fiao`) VALUES
+	(0, 0.00, 0.00, '2023-12-22 14:52:21', '0', '0', NULL, NULL, NULL);", objConn)
+
+            objCmd20.ExecuteNonQuery()
+
+
             objConn.Close()
+
+
+
 
         Catch ex As Exception
             MsgBox("Error al crear la base de datos")
