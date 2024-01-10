@@ -110,6 +110,18 @@
     <Compile Include="Configuracion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pdeuda.Designer.vb">
+      <DependentUpon>pdeuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pdeuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deudores.Designer.vb">
+      <DependentUpon>deudores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deudores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Facturacion.Designer.vb">
       <DependentUpon>Facturacion.vb</DependentUpon>
     </Compile>
@@ -202,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pdeuda.resx">
+      <DependentUpon>pdeuda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deudores.resx">
+      <DependentUpon>deudores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.vb</DependentUpon>

@@ -240,4 +240,8 @@ Public Class Form1
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
         Ventas.ShowDialog()
     End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        deudores.ShowDialog()
+    End Sub
 End Class
